@@ -1,0 +1,21 @@
+[{
+  "name": "firefox",
+  "defaultVersion": "33.0",
+  "versions": ["33.0", "36.0", "37.0", "38.0"]
+}, {
+  "name": "chrome",
+  "defaultVersion": "42",
+  "versions": ["40", "41", "42", "43"]
+}, {
+  "name": "opera",
+  "defaultVersion": "12",
+  "versions": ["12"]
+}, {
+  "name": "internet explorer",
+  "defaultVersion": "11",
+  "versions": ["8", "9", "10", "11"]
+}, {
+  "name": "safari",
+  "defaultVersion": "",
+  "versions": ["6", "7", "8"]
+}]

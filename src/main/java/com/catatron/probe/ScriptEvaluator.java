@@ -21,6 +21,7 @@ public class ScriptEvaluator {
         try {
             return new RemoteWebDriver(config.getSeleniumUrl(), browser);
         } catch(Exception e) {
+            e.printStackTrace();
             throw new Exception(format("Could not get browser %s %s", browserName, browserVersion));
         }
     }

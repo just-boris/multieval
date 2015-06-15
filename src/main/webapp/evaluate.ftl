@@ -46,7 +46,7 @@
         </#list>
         <h3>Code</h3>
         <div class="form-group">
-            <textarea class="form-control evaluate-app__script" name="code" cols="30" rows="10"></textarea>
+            <textarea class="form-control evaluate-app__script" name="code" cols="30" rows="10">return 'ok';</textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-default">Evaluate</button>

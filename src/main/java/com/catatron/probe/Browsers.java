@@ -16,7 +16,7 @@ import static java.util.Arrays.asList;
 @Component
 public class Browsers {
 
-    @Value("#{systemProperties['browsers.file'] != null ? 'file:'+systemProperties['browsers.file'] : 'browsers.json'}")
+    @Value("#{systemProperties['browsers.file'] != null ? 'file:'+systemProperties['browsers.file'] : 'classpath:/browsers.json'}")
     Resource browsers;
 
     public List<Browser> getAll() throws IOException {

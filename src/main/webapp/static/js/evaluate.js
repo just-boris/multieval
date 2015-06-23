@@ -17,8 +17,8 @@ EvaluateApp.prototype.onSubmit = function(e) {
 EvaluateApp.prototype.getSelectedBrowsers = function() {
     return this.elem.find('.browser').toArray().reduce(function(browsers, browser) {
         var $browser = $(browser);
-        var browserName = $browser.find('.browser__name').text();
-        return browsers.concat($browser.find('.browser__version input[type=checkbox]:checked').toArray().map(function(version) {
+        var browserName = $browser.find('.browser__name').text().trim();
+        return browsers.concat($browser.find('.version-checkbox input[type=checkbox]:checked').toArray().map(function(version) {
             return {
                 browserName: browserName,
                 version: version.value

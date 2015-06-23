@@ -1,0 +1,91 @@
+body {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.navbar-default {
+  background: #1d64bb;
+  border-radius: 0;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > .active > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > .active > a {
+  background: #5998e5;
+}
+
+.firefox-icon {
+  background-image: url("../img/firefox.png");
+}
+
+.chrome-icon {
+  background-image: url("../img/chrome.png");
+}
+
+.opera-icon {
+  background-image: url("../img/opera.png");
+}
+
+.internet-explorer-icon {
+  background-image: url("../img/internet-explorer.png");
+}
+
+.safari-icon {
+  background-image: url("../img/safari.png");
+}
+
+.browser__name {
+  font-size: 18px;
+}
+.browser__icon {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+  width: 48px;
+  height: 48px;
+  margin-right: 5px;
+}
+.browser__versions {
+  margin-left: 60px;
+}
+
+.version-checkbox input[type=checkbox] {
+  display: none;
+}
+.version-checkbox label {
+  display: block;
+  max-width: 150px;
+  cursor: pointer;
+}
+.version-checkbox__display {
+  display: block;
+  position: relative;
+  padding: 3px 6px;
+}
+.version-checkbox__display:before {
+  content: ' ';
+  top: 1px;
+  margin-right: 0.6em;
+  width: 1em;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e013";
+  color: #fff;
+}
+.version-checkbox__display:hover {
+  background: #ebebeb;
+}
+input[type=checkbox]:checked + .version-checkbox__display {
+  background: #1d64bb;
+  color: #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */

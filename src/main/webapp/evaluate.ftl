@@ -12,7 +12,7 @@
             <a class="navbar-brand" href="/">Probe</a>
         </div>
 
-        <div class="collapse navbar-collapse">
+        <div class="collapse in navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/evaluate">Evaluate</a></li>
                 <li class="disabled" title="Not implemented yet"><a>Screenshots</a></li>
@@ -28,20 +28,25 @@
     <form class="evaluate-app">
         <button class="btn btn-link pull-right">
             <span class="glyphicon glyphicon-chevron-up"></span>
-            Close
+            Collapse
         </button>
         <h3>Browsers</h3>
         <#list browsers as browser>
             <div class="browser">
-                <h5 class="text-capitalize browser__name">${browser.name}</h5>
-                <#list browser.versions as version>
-                    <div class="checkbox browser__version">
-                        <label>
-                            <input type="checkbox" value="${version}" <#if version == browser.defaultVersion>checked</#if> />
-                            <span>${version}</span>
-                        </label>
-                    </div>
-                </#list>
+                <h5 class="text-capitalize browser__name">
+                    <span class="browser__icon ${browser.name}-icon"></span>
+                    ${browser.name}
+                </h5>
+                <div class="browser__versions">
+                    <#list browser.versions as version>
+                        <div class="version-checkbox">
+                            <label>
+                                <input type="checkbox" value="${version}" <#if version == browser.defaultVersion>checked</#if> />
+                                <span class="version-checkbox__display">${version}</span>
+                            </label>
+                        </div>
+                    </#list>
+                </div>
             </div>
         </#list>
         <h3>Code</h3>
@@ -49,7 +54,7 @@
             <textarea class="form-control evaluate-app__script" name="code" cols="30" rows="10">return 'ok';</textarea>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-default">Evaluate</button>
+            <button type="submit" class="btn btn-primary">Evaluate</button>
         </div>
         <div class="requests" hidden>
             <h3>Requests</h3>

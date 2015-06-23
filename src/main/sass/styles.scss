@@ -58,6 +58,20 @@ body {
   }
 }
 
+.browser-thumb {
+  display: inline-block;
+  margin-right: 0.5em;
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+  }
+}
+
 .version-checkbox {
   input[type=checkbox] {
     display: none;

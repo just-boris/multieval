@@ -26,29 +26,38 @@
     <p>Evaluate your javascript snippet into differen browsers and compare results</p>
 
     <form class="evaluate-app">
-        <button class="btn btn-link pull-right">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-            Collapse
-        </button>
         <h3>Browsers</h3>
-        <#list browsers as browser>
-            <div class="browser">
-                <h5 class="text-capitalize browser__name">
-                    <span class="browser__icon ${browser.name}-icon"></span>
+        <div class="evaluate-app__browsers">
+            <button type="button" class="btn btn-link pull-right evaluate-app__collapse">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+                Collapse
+            </button>
+            <#list browsers as browser>
+                <div class="browser">
+                    <h5 class="text-capitalize browser__name">
+                        <span class="browser__icon ${browser.name}-icon"></span>
                     ${browser.name}
-                </h5>
-                <div class="browser__versions">
-                    <#list browser.versions as version>
-                        <div class="version-checkbox">
-                            <label>
-                                <input type="checkbox" value="${version}" <#if version == browser.defaultVersion>checked</#if> />
-                                <span class="version-checkbox__display">${version}</span>
-                            </label>
-                        </div>
-                    </#list>
+                    </h5>
+                    <div class="browser__versions">
+                        <#list browser.versions as version>
+                            <div class="version-checkbox">
+                                <label>
+                                    <input type="checkbox" value="${version}" <#if version == browser.defaultVersion>checked</#if> />
+                                    <span class="version-checkbox__display">${version}</span>
+                                </label>
+                            </div>
+                        </#list>
+                    </div>
                 </div>
-            </div>
-        </#list>
+            </#list>
+        </div>
+        <div class="evaluate-app__short" hidden>
+            <button type="button" class="btn btn-link pull-right evaluate-app__expand">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+                Edit
+            </button>
+            <div class="evaluate-app__display"></div>
+        </div>
         <h3>Code</h3>
         <div class="form-group">
             <textarea class="form-control evaluate-app__script" name="code" cols="30" rows="10">return 'ok';</textarea>

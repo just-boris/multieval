@@ -27,7 +27,7 @@
 
     <form class="evaluate-app">
         <h3>Browsers</h3>
-        <div class="evaluate-app__browsers">
+        <div class="browser-select">
             <button type="button" class="btn btn-link pull-right evaluate-app__collapse">
                 <span class="glyphicon glyphicon-chevron-up"></span>
                 Collapse
@@ -51,12 +51,12 @@
                 </div>
             </#list>
         </div>
-        <div class="evaluate-app__short" hidden>
+        <div class="browser-display" hidden>
             <button type="button" class="btn btn-link pull-right evaluate-app__expand">
                 <span class="glyphicon glyphicon-chevron-down"></span>
                 Edit
             </button>
-            <div class="evaluate-app__display"></div>
+            <div class="browser-display__display"></div>
         </div>
         <h3>Code</h3>
         <div class="form-group">
@@ -73,5 +73,7 @@
 
 <script src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
 <script src="/static/js/evaluate.js"></script>
+<script src="/static/js/browser-display.js"></script>
+<script src="/static/js/browser-select.js"></script>
 </body>
 </html>

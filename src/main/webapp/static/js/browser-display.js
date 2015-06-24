@@ -10,11 +10,7 @@ BrowserDisplay.prototype.hide = function() {
 };
 BrowserDisplay.prototype.setBrowsers = function(browsers) {
     var html = browsers.map(function(browser) {
-        var iconClass = browser.browserName + '-icon';
-        return '<span class="browser-thumb text-capitalize">' +
-            '<span class="browser-thumb__icon ' + iconClass + '"></span> '
-            + browser.browserName + ' ' + browser.version +
-            '</span>'
+        return new BrowserThumb(browser).render()
     }).join(' ');
     this.display.html(html);
 };

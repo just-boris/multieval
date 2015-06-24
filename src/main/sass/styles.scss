@@ -34,10 +34,14 @@ body {
   }
 }
 
-@each $browser in firefox, chrome, opera, internet-explorer, safari {
+@each $browser in firefox, chrome, opera, safari {
   .#{$browser}-icon {
     background-image: url('../img/#{$browser}.png');
   }
+}
+
+.internet.explorer-icon {
+  background-image: url('../img/internet-explorer.png');
 }
 
 .browser {
@@ -102,6 +106,13 @@ body {
       background: $base-color;
       color: #fff;
     }
+  }
+}
+
+.request {
+  margin-bottom: 0.5em;
+  &__output {
+    margin-left: 18px;
   }
 }
 

@@ -33,9 +33,13 @@ public class ScriptEvaluator {
         try {
             result = ((JavascriptExecutor) driver).executeScript(javascript);
         } catch (Exception e) {
-            throw new Exception("Could not execute script");
+            String message = e.getMessage();
+            message = message.substring(0, message.indexOf(System.getProperty("line.separator")));
+            throw new Exception("Could not execute script: " + message);
         }
-        driver.quit();
+        finally {
+            driver.quit();
+        }
         return result;
     }
     

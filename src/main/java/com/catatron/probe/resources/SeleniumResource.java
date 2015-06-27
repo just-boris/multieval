@@ -22,7 +22,7 @@ public class SeleniumResource {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/evaluate")
-    public Response takeScreenshot(
+    public Response evaluateScript(
             @QueryParam("browser") String browserName,
             @QueryParam("version") String browserVersion,
             String javascript

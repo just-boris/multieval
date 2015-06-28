@@ -40,11 +40,6 @@ public class ScriptEvaluatorTest {
         return driver.getScreenshotAs(OutputType.BYTES);
     }
 
-    @Attachment
-    String savePageSource() {
-        return driver.getPageSource();
-    }
-
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities browser = DesiredCapabilities.internetExplorer();
@@ -58,8 +53,6 @@ public class ScriptEvaluatorTest {
         Response response = driver.getCommandExecutor().execute(new Command(driver.getSessionId(), DriverCommand.UPLOAD_FILE, ImmutableMap.of("file", zip)));
         driver.get("file://" + response.getValue());
         assertThat(driver.getTitle(), equalTo("Test page"));
-        savePageSource();
-        Thread.sleep(3000);
         try {
             Object result = driver.executeScript("return document.documentMode;");
             System.out.println(result);

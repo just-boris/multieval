@@ -2,7 +2,6 @@ package com.catatron.probe;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ public class ScriptEvaluator {
     @Autowired
     Config config;
 
-    private WebDriver getDriver(String browserName, String browserVersion) throws Exception {
+    private RemoteWebDriver getDriver(String browserName, String browserVersion) throws Exception {
         final DesiredCapabilities browser = new DesiredCapabilities(browserName, browserVersion, Platform.ANY);
         try {
             return new RemoteWebDriver(config.getSeleniumUrl(), browser);
@@ -27,7 +26,7 @@ public class ScriptEvaluator {
     }
 
     public Object evaluate(String browserName, String browserVersion, String javascript) throws Exception {
-        WebDriver driver = getDriver(browserName, browserVersion);
+        RemoteWebDriver driver = getDriver(browserName, browserVersion);
         driver.get("about:blank");
         Object result;
         try {

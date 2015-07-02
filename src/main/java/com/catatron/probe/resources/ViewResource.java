@@ -2,11 +2,14 @@ package com.catatron.probe.resources;
 
 import com.catatron.probe.Browsers;
 import com.catatron.probe.Config;
+import com.catatron.probe.UrlUtil;
 import org.glassfish.jersey.server.mvc.Viewable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,7 +17,6 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,9 +34,16 @@ public class ViewResource {
     @Context
     ServletContext context;
 
+    @Context
+    HttpServletRequest request;
+
+    @Context
+    HttpServletResponse response;
+
     @GET
-    public Response index() throws URISyntaxException {
-        return Response.temporaryRedirect(new URI("/evaluate")).build();
+    public Response index() throws IOException {
+        response.sendRedirect(UrlUtil.getUrlTo(request, "/evaluate"));
+        return Response.ok().build();
     }
 
     @GET

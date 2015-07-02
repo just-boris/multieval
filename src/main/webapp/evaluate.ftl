@@ -1,9 +1,10 @@
 <#-- @ftlvariable name="browsers" type="java.util.List<com.catatron.probe.beans.Browser>"  -->
+<#-- @ftlvariable name="base_path" type="java.lang.String"  -->
 <html>
 <head>
     <title>Probe</title>
     <link rel="stylesheet" href="https://yastatic.net/bootstrap/3.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/static/css/styles.css"/>
+    <link rel="stylesheet" href="${base_path}/static/css/styles.css"/>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -23,7 +24,7 @@
 <div class="container">
     <h1>Evaluate</h1>
 
-    <p>Evaluate your javascript snippet into differen browsers and compare results</p>
+    <p>Evaluate your javascript snippet into different browsers and compare results</p>
 
     <form class="evaluate-app">
         <h3>Browsers</h3>
@@ -72,10 +73,10 @@
 </div>
 
 <script src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
-<script src="/static/js/evaluate.js"></script>
-<script src="/static/js/evaluate-request.js"></script>
-<script src="/static/js/browser-thumb.js"></script>
-<script src="/static/js/browser-display.js"></script>
-<script src="/static/js/browser-select.js"></script>
+<script src="${base_path}/static/js/evaluate.js"></script>
+<script src="${base_path}/static/js/evaluate-request.js"></script>
+<script src="${base_path}/static/js/browser-thumb.js"></script>
+<script src="${base_path}/static/js/browser-display.js"></script>
+<script src="${base_path}/static/js/browser-select.js"></script>
 </body>
 </html>

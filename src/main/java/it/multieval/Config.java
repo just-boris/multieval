@@ -1,4 +1,4 @@
-package com.catatron.probe;
+package it.multieval;
 
 import org.apache.http.client.utils.URIBuilder;
 import org.springframework.beans.factory.annotation.Value;

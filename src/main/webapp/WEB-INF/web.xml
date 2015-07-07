@@ -15,7 +15,7 @@
         <filter-class>org.glassfish.jersey.servlet.ServletContainer</filter-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>com.catatron.probe.Application</param-value>
+            <param-value>it.multieval.Application</param-value>
         </init-param>
     </filter>
 

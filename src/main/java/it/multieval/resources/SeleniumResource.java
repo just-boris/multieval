@@ -1,6 +1,6 @@
-package com.catatron.probe.resources;
+package it.multieval.resources;
 
-import com.catatron.probe.ScriptEvaluator;
+import it.multieval.ScriptEvaluator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

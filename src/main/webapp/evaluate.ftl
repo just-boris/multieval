@@ -1,8 +1,8 @@
-<#-- @ftlvariable name="browsers" type="java.util.List<com.catatron.probe.beans.Browser>"  -->
+<#-- @ftlvariable name="browsers" type="java.util.List<it.multieval.beans.Browser>"  -->
 <#-- @ftlvariable name="base_path" type="java.lang.String"  -->
 <html>
 <head>
-    <title>Probe</title>
+    <title>Multieval</title>
     <link rel="stylesheet" href="https://yastatic.net/bootstrap/3.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="${base_path}/static/css/styles.css"/>
 </head>
@@ -10,13 +10,16 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">Probe</a>
+            <a class="navbar-brand" href="/">Multieval</a>
         </div>
 
         <div class="collapse in navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/evaluate">Evaluate</a></li>
                 <li class="disabled" title="Not implemented yet"><a>Screenshots</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/just-boris/multieval">Source on Github</a></li>
             </ul>
         </div>
     </div>

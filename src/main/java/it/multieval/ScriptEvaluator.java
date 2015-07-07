@@ -1,4 +1,4 @@
-package com.catatron.probe;
+package it.multieval;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Platform;

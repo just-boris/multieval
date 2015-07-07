@@ -1,8 +1,7 @@
-package com.catatron.probe.resources;
+package it.multieval.resources;
 
-import com.catatron.probe.Browsers;
-import com.catatron.probe.Config;
-import com.catatron.probe.UrlUtil;
+import it.multieval.Browsers;
+import it.multieval.Config;
 import org.glassfish.jersey.server.mvc.Viewable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

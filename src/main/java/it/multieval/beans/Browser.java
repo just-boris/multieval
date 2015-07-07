@@ -1,4 +1,4 @@
-package com.catatron.probe.beans;
+package it.multieval.beans;
 
 import java.util.List;
 

@@ -9,12 +9,12 @@
         <version>9</version>
     </parent>
 
-    <groupId>com.catatron</groupId>
-    <artifactId>probe</artifactId>
+    <groupId>it.multieval</groupId>
+    <artifactId>server</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>Probe</name>
+    <name>Multieval</name>
 
     <properties>
         <aspectj.version>1.7.4</aspectj.version>

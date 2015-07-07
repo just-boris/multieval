@@ -1,14 +1,11 @@
-package com.catatron.probe;
+package it.multieval;
 
 import com.google.common.collect.ImmutableMap;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.Zip;
 import org.openqa.selenium.remote.*;
 import org.springframework.beans.factory.annotation.Autowired;

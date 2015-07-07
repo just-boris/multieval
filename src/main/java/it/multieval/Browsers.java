@@ -1,6 +1,6 @@
-package com.catatron.probe;
+package it.multieval;
 
-import com.catatron.probe.beans.Browser;
+import it.multieval.beans.Browser;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import com.google.gson.Gson;

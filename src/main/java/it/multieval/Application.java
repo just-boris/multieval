@@ -1,4 +1,4 @@
-package com.catatron.probe;
+package it.multieval;
 
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;

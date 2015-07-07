@@ -2,6 +2,7 @@ package it.multieval.resources;
 
 import it.multieval.Browsers;
 import it.multieval.Config;
+import it.multieval.UrlUtil;
 import org.glassfish.jersey.server.mvc.Viewable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

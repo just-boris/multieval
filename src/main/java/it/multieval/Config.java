@@ -25,6 +25,9 @@ public class Config {
     @Value("${selenium.password}")
     private String seleniumPassword;
 
+    @Value("${analytics.key}")
+    private String analyticsKey;
+
     public String getSeleniumHost() {
         return seleniumHost;
     }
@@ -55,5 +58,9 @@ public class Config {
         }
         builder.setPath("/wd/hub");
         return builder.build().toURL();
+    }
+
+    public String getAnalyticsKey() {
+        return analyticsKey;
     }
 }

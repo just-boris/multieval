@@ -1,5 +1,6 @@
 <#-- @ftlvariable name="browsers" type="java.util.List<it.multieval.beans.Browser>"  -->
 <#-- @ftlvariable name="base_path" type="java.lang.String"  -->
+<#-- @ftlvariable name="analytics_key" type="java.lang.String"  -->
 <html>
 <head>
     <title>Multieval</title>
@@ -81,5 +82,23 @@
 <script src="${base_path}/static/js/browser-thumb.js"></script>
 <script src="${base_path}/static/js/browser-display.js"></script>
 <script src="${base_path}/static/js/browser-select.js"></script>
+<#if analytics_key?length &gt; 0>
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                };
+        i[r].l = 1 * new Date();
+        a = s.createElement(o);
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '${analytics_key}', 'auto');
+    ga('send', 'pageview');
+</script>
+</#if>
 </body>
 </html>

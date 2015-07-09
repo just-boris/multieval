@@ -5,6 +5,7 @@ import it.multieval.Config;
 import it.multieval.UrlUtil;
 import org.glassfish.jersey.server.mvc.Viewable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletContext;
@@ -53,6 +54,7 @@ public class ViewResource {
         final Map<String, Object> map = new HashMap<>();
         map.put("base_path", context.getContextPath());
         map.put("seleniumUrl", config.getSeleniumUrl());
+        map.put("analytics_key", config.getAnalyticsKey());
         map.put("browsers", browsers.getAll());
 
         return new Viewable("/evaluate.ftl", map);
